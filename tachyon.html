@@ -1,0 +1,331 @@
+ <html>
+     <head>
+       <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+         <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+         <style>@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo
+{
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.toggle
+{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url(https://i.ibb.co/HrfVRcx/menu.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+.toggle.active
+{
+  background: url(https://i.ibb.co/rt3HybH/close.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  cursor: pointer;
+}
+.showcase
+{
+  position: relative;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+}
+.down{
+  background:#000000;
+}
+.showcase.active
+{
+  right: 300px;
+}
+
+.showcase video
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: #03a9f4; */
+  mix-blend-mode: overlay;
+}
+.text
+{
+  position: relative;
+  z-index: 10;
+}
+
+.text h2
+{
+  font-size: 5em;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text h3
+{
+  font-size: 4em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text h4
+{
+  font-size: 3em;
+  margin-top: 0px;
+  padding-top: 0px;
+  top: 20;
+  font-weight: 500;
+  margin-left: auto;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+}
+.text p
+{
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+.text a
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.text a:hover
+{
+  letter-spacing: 6px;
+}
+.social
+{
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social li
+{
+  list-style: none;
+}
+.social li a
+{
+  display: inline-block;
+  margin-right: 20px;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+.social li a:hover
+{
+  transform: scale(0.5) translateY(-15px);
+}
+.menu
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu ul
+{
+  position: relative;
+}
+.menu ul li
+{
+  list-style: none;
+}
+.menu ul li a
+{
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
+}
+.menu ul li a:hover
+{
+  color: #03a9f4; 
+}
+
+
+#specs{
+    bottom: 200px;
+        margin-left: auto;
+    margin-right: auto;
+}
+#specs p{
+    margin-left: auto;
+    font-size:40px;
+
+    margin-right: auto;
+}
+#specpic{
+  margin-left: 10;
+  width:80%;
+}
+.spec-p{
+  color:#B90E0D;
+}
+
+@media (max-width: 991px)
+{
+  .showcase,
+  .showcase header
+  {
+    padding: 40px;
+  }
+  .text h2
+  {
+    font-size: 3em;
+  }
+  .text h3
+  {
+    font-size: 2em;
+  }
+
+}
+
+</style>
+     </head>
+     <body>
+
+         <!-- Video Source -->
+          <!-- https://www.pexels.com/video/aerial-view-of-beautiful-resort-2169880/ -->
+          <section class="showcase">
+            <header>
+              
+              <span><img id="logo" src="./logo-trans.png" height="50"><h2 class="logo" style='display:inline;'>Quasar</h2></span>
+              
+              <div class="toggle"></div>
+            </header>
+            <video width="320" height="240" src="./slipseam-bg.mov" muted loop autoplay></video>
+            <div class="overlay"></div>
+            <div class="text">
+              <h2>The All New </h2> 
+              <h3>Tachyon 2021</h3>
+              <p>The car powered by air and sunshine. Now travel anywhere in complete luxury without paying a single buck for fuel. Drive the most Eco-friendly only car ever. Order Now!</p>
+            </div>
+            <ul class="social" id="specs">
+                <p class="spec-p">Ecofreindly | Best in Class Storage | Starts from 8 lakhs</p>
+                
+            </ul>
+            <ul class="social">
+              <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+              <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+              <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+            </ul>
+            </section>
+            <section class="showcase down">
+              <div class="container-fluid">
+              <div class="row">
+            <div class="col-md-8">             
+               <img align="left" src="./photon-spec-pic.png" id="specpic">
+            </div>
+            <div class="col-md-4 text">
+              <h4>Tachyon 2021 Specs</h4><br />
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Storage -: 2.03881 m3</li>
+                <li class="list-group-item">Kilometers Per Charge -: 375​</li>
+                <li class="list-group-item">Power Source -: Rechargeable Lithium Ion Battery​​ with Solar Panels</li>
+                <li class="list-group-item">Number of Passengers -: 5​</li>
+                <li class="list-group-item">Safety -: 5-Star Safety with mordern security devices</li>
+                <li class="list-group-item">Controller Touchscreen -: 21.5' 5K Touchscreen</li>
+                <li class="list-group-item">Whels -: 21'​</li>
+                <li class="list-group-item">Weight -: 2030.05 kg</li>
+                <li class="list-group-item">Interior -: Normal, Premium, Royal</li>
+              </ul>
+            </div>
+            </div>
+            </div>
+             </section>
+            <section class="showcase down">
+              <hr />
+               <div class="text">
+              <h4>Experience the Tachyon3D</h4>
+              </div>
+              <iframe src="https://gmail226163.autodesk360.com/shares/public/SH919a0QTf3c32634dcfbfa68f19a36d24c9?mode=embed" width="1024" height="768" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+              </section>
+           
+
+          
+          <div class="menu">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./photon.html">Photon</a></li>
+              <li><a href="#">Tachyon</a></li>
+              <li><a href="./our-team.html">Our Team</a></li>
+              <li><a href="./contact-us.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <script> 
+          const menuToggle = document.querySelector('.toggle');
+      const showcase = document.querySelector('.showcase');
+
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        showcase.classList.toggle('active');
+      })
+      </script>
+     </body>
+     </html>

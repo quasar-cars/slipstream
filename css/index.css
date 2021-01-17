@@ -1,0 +1,166 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    position: relative;
+    height: 100vh;
+    background: #009fff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #009fff, #ec2f4b); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #009fff, #ec2f4b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.ct-circle{
+    /* Circles behind the glass pane */
+    position: absolute;
+    width: 12rem;
+    height: 12rem;
+    background: #ee0979;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    border-radius: 50%;
+}
+
+.ct-circle:first-of-type{
+    top: 4rem;
+    left: 45rem;
+}
+
+.ct-circle:nth-of-type(2){
+    top: 20rem;
+    left: 28rem;
+}
+
+.ct-circle:last-of-type{
+    top: 34rem;
+    left: 50rem;
+}
+
+.glass-container{
+    display: flex;
+      flex-wrap: wrap;
+/*    justify-content: center;
+    align-items: center;*/
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+}
+
+.glass{
+    /* The glass pane */
+    height: 30%;
+    width: 30%;
+    margin-left:20px;
+    background-color: rgba(255, 255, 255, 0.20);
+    border-radius: 10px;
+    border: .5px solid rgba(255, 255, 255, 0.20);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.3);
+    backdrop-filter: blur(10px); /*The blur effect*/
+    z-index: 3;
+    transition: .1s all ease;
+}
+.second{
+    margin-left:40px;
+}
+.first{
+    margin-left: 280px;
+}
+.header{
+    width: 100%;
+    padding: .8rem;
+}
+
+.header > span{
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    z-index: 10;
+    margin-right: 3px;
+}
+
+.header > span:first-of-type{
+    background-color: #fa5656;
+}
+
+.header > span:nth-of-type(2){
+    background-color: #ffff4f;
+}
+
+.header > span:last-of-type{
+    background-color: #4dc04d;
+}
+
+.image-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content{
+    margin-top: 2rem;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid rgb(250, 250, 250);
+}
+
+.description{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.description > * {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.507);
+}
+
+.description h3{
+    margin-bottom: 5px;
+}
+
+.description h5{
+    margin-bottom: 1rem;
+}
+
+.description p{
+    padding: 1rem;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.footer a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: #00a2ff;
+    width: 8rem;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.break{
+    margin-left:20px;
+    margin-rigt: 20px;
+}
